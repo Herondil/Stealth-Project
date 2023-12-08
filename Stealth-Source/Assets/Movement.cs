@@ -20,12 +20,12 @@ public class Movement : MonoBehaviour
     void Update()
     {
         Gamepad gamepad = Gamepad.current;
-        Keyboard k = Keyboard.current;
+        Keyboard k      = Keyboard.current;
 
         if(gamepad != null)
         {
-            float y = gamepad.leftStick.y.ReadValue();
-            float x = gamepad.leftStick.x.ReadValue();
+            float y = gamepad.leftStick.y.ReadValue(),
+                  x = gamepad.leftStick.x.ReadValue();
             dir = new Vector3(x,0,y);
         }
     }

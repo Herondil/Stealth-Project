@@ -34,6 +34,7 @@ public class MoveBest : MonoBehaviour
     {
         float y = Move.ReadValue<Vector2>().y;
         float x = Move.ReadValue<Vector2>().x;
+
         dir = new Vector3(x, 0, y);
     }
     private void FixedUpdate()
