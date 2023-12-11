@@ -16,6 +16,14 @@ public class SimpleController_UsingPlayerInput : MonoBehaviour
     private Vector2 m_Look;
     private Vector2 m_Move;
 
+
+    Rigidbody m_Rigidbody;
+
+    private void Awake()
+    {
+        m_Rigidbody = GetComponent<Rigidbody>();
+    }
+
     public void OnMove(InputAction.CallbackContext context)
     {
         m_Move = context.ReadValue<Vector2>();
@@ -59,7 +67,7 @@ public class SimpleController_UsingPlayerInput : MonoBehaviour
             GUI.Label(new Rect(100, 100, 200, 100), "Charging...");
     }
 
-    public void Update()
+    public void FixedUpdate()
     {
         // Update orientation first, then move. Otherwise move orientation will lag
         // behind by one frame.

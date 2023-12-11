@@ -9,38 +9,62 @@ public class MoveFinal : MonoBehaviour
     float speed;
 
     Rigidbody rb;
-    Vector3 dir;
+    Vector2 inputDir;
+    Vector3 moveDir;
+    Quaternion rot;
 
 
 
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
-        dir = Vector3.zero;
+        inputDir = Vector3.zero;
     }
 
-    /// <summary>
-    ///     Pour souscrire à l'évènement de l'action Move
-    /// </summary>
-    /// <param name="c"></param>
-    public void OnMove(InputValue value)
+    public void OnMove(InputAction.CallbackContext c)
     {
-        float y = value.Get<Vector2>().y;
-        float x = value.Get<Vector2>().x;
-        dir.x = x;
-        dir.z = y;
+        if (c.performed) { 
+
+            float y = c.ReadValue<Vector2>().y;
+            float x = c.ReadValue<Vector2>().x;
+            inputDir.x = x;
+            inputDir.y = y;
+        }
+
+        if (c.canceled) inputDir = Vector3.zero;
     }
-
-
 
     private void FixedUpdate()
     {
-        Debug.Log("FU : x " + dir.x + " y " + dir.y + " z " + dir.z);
-        if (dir.sqrMagnitude > 0)
-        {
-            //rotation 
+        //on récupère cameraForward dans une variable pour corriger son y, pour être "parallèle" au sol
+        //idem pour cameraRight
+        Vector3 cameraForward   = Camera.main.transform.forward;
+        Vector3 cameraRight     = Camera.main.transform.right;
 
-            rb.MovePosition(transform.position + dir * speed);
+        cameraForward.y = 0;
+        cameraRight.y = 0;
+
+        //on fait une rotation à chaque fixedUpdate pour vérifier qu'on a bien la bonne direction
+        rot = Quaternion.LookRotation(cameraForward);
+        rb.MoveRotation(rot);
+        
+        //moveDir sera la direction finale du déplacement
+        moveDir = Vector3.zero;
+
+        if (inputDir.sqrMagnitude > 0)
+        {
+            //on va multiplier la direction "forward" de la caméra par l'input en y
+            //on sait ainsi si on avance ou si on recule
+            Vector3 moveForward = cameraForward * inputDir.y;
+
+            //même raisonnement pour gauche/droite
+            Vector3 moveRight   = cameraRight * inputDir.x;
+
+            //on veut aller en même temps dans les deux directions
+            moveDir = moveForward + moveRight;
+            
+            //rotation 
+            rb.MovePosition(transform.position + moveDir.normalized * speed);
         }
     }
 }
