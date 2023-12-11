@@ -20,7 +20,7 @@ public class MoveBest : MonoBehaviour
     void Awake()
     {
         //copié de la doc
-        Move = IAA.FindActionMap("default").FindAction("Move");
+        Move = IAA.FindActionMap("gameplay").FindAction("move");
         
         
         Move.Enable();
