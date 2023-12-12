@@ -6,7 +6,12 @@ using UnityEngine.InputSystem;
 public class MoveFinal : MonoBehaviour
 {
     [SerializeField]
-    float speed;
+    float walkingSpeed;
+    [SerializeField]
+    float sprintingSpeed;
+
+    //la vitesse utilisée actuellement (soit walking soit sprinting speed)
+    private float currentSpeed;
 
     Rigidbody rb;
     Vector2 inputDir;
@@ -19,12 +24,13 @@ public class MoveFinal : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         inputDir = Vector3.zero;
+        currentSpeed = walkingSpeed;
     }
 
     public void OnMove(InputAction.CallbackContext c)
     {
-        if (c.performed) { 
-
+        if (c.performed) {
+            currentSpeed = walkingSpeed;
             float y = c.ReadValue<Vector2>().y;
             float x = c.ReadValue<Vector2>().x;
             inputDir.x = x;
@@ -34,6 +40,17 @@ public class MoveFinal : MonoBehaviour
         if (c.canceled) inputDir = Vector3.zero;
     }
 
+    public void OnSprint(InputAction.CallbackContext c)
+    {
+        if (c.started)
+        {
+            currentSpeed = sprintingSpeed;
+        }
+        if (c.canceled)
+        {
+            currentSpeed = walkingSpeed;
+        }
+    }
     private void FixedUpdate()
     {
         //on récupère cameraForward dans une variable pour corriger son y, pour être "parallèle" au sol
@@ -64,7 +81,7 @@ public class MoveFinal : MonoBehaviour
             moveDir = moveForward + moveRight;
             
             //rotation 
-            rb.MovePosition(transform.position + moveDir.normalized * speed);
+            rb.MovePosition(transform.position + moveDir.normalized * currentSpeed);
         }
     }
 }

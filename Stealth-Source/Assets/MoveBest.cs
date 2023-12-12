@@ -22,7 +22,6 @@ public class MoveBest : MonoBehaviour
         //copié de la doc
         Move = IAA.FindActionMap("gameplay").FindAction("move");
         
-        
         Move.Enable();
 
         rb = GetComponent<Rigidbody>();

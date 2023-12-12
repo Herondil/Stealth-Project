@@ -1,0 +1,56 @@
+[33mcommit a17c1940706f1e6c60435b7cf1f814448ce69efa[m[33m ([m[1;36mHEAD[m[33m)[m
+Author: Maxens Dubois <maxens.dubois@gmail.com>
+Date:   Mon Dec 11 15:48:04 2023 +0100
+
+    Déplacement relatifs à la caméra
+    
+    Première version du script
+
+[33mcommit 650651bc4be5075be141dfd032873e2a1e478da0[m
+Author: Maxens Dubois <maxens.dubois@gmail.com>
+Date:   Fri Dec 8 18:29:48 2023 +0100
+
+    Player Input integration
+
+[33mcommit a94f06643c9bb97226d7781b1c9dc4ded546d909[m
+Author: Maxens Dubois <maxens.dubois@gmail.com>
+Date:   Thu Dec 7 17:20:06 2023 +0100
+
+    New Move Script + TMP + Input Action Asset
+
+[33mcommit 61c85d881b76f32c7b8293cd8476c972c5627df5[m
+Author: Maxens Dubois <maxens.dubois@gmail.com>
+Date:   Wed Dec 6 15:30:40 2023 +0100
+
+    Premier script de déplacement avec Input System
+
+[33mcommit 87d49128469e38482af429918e9a44d2294d95fe[m
+Merge: c77bce7 1c72306
+Author: Maxens Dubois <maxens.dubois@gmail.com>
+Date:   Tue Dec 5 12:56:20 2023 +0100
+
+    Merge branch 'main' of https://github.com/Herondil/Stealth-Project
+
+[33mcommit c77bce7fcfdce0a71899f7d6deb1175036efe4d8[m
+Author: Maxens Dubois <maxens.dubois@gmail.com>
+Date:   Tue Dec 5 12:56:17 2023 +0100
+
+    Scene de prototype + Prefab + premier script move
+
+[33mcommit 1c7230639e568027d2b622ae765b58f86946959c[m
+Author: Maxens Dubois <maxens.dubois@gmail.com>
+Date:   Tue Dec 5 10:25:35 2023 +0100
+
+    Update README.md
+
+[33mcommit b8d5f961985838ffe503eae67479b25aaa36a24a[m
+Author: Maxens Dubois <maxens.dubois@gmail.com>
+Date:   Tue Dec 5 10:23:01 2023 +0100
+
+    Update README.md
+
+[33mcommit 0502dc9d20f8bab57d629965ea53a76422196900[m
+Author: Maxens Dubois <maxens.dubois@gmail.com>
+Date:   Tue Dec 5 10:17:29 2023 +0100
+
+    Initial commit
