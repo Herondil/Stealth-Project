@@ -7,6 +7,7 @@ public class GroundDetection : MonoBehaviour
     public float distance;
     public float gravity;
     public LayerMask groundMask; //pour passer à travers les autres masques
+    public bool IsGrounded;
 
 
     private void OnCollisionStay(Collision collision)
@@ -25,14 +26,17 @@ public class GroundDetection : MonoBehaviour
         if(Physics.Raycast(transform.position, Vector3.down, out hit, distance,groundMask))
         {
             //on touche le sol 
-            //Debug.Log("on ground");
-            Debug.DrawRay(transform.position, hit.normal * distance, Color.magenta);
+            IsGrounded = true;
+            //Debug.DrawRay(transform.position, hit.normal * distance, Color.magenta);
             //Debug.Log("Angle entre V3.up et la normal de hit "+Vector3.Angle(Vector3.up, hit.normal));
+            Debug.DrawRay(transform.position, hit.point, Color.red);
         }
         else
         {
             //on le touche pas
+            IsGrounded = false;
+            Debug.DrawRay(transform.position, Vector3.down * distance, Color.red);
         }
-        Debug.DrawRay(transform.position, Vector3.down * distance, Color.red);
+        
     }
 }
