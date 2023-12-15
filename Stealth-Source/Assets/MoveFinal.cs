@@ -18,8 +18,6 @@ public class MoveFinal : MonoBehaviour
     Vector3 moveDir;
     Quaternion rot;
 
-
-
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
