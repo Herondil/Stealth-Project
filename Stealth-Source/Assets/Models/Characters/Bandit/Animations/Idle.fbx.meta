@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: 95a3b2599bdb03a4ca0af6b9b4f30fdd
 ModelImporter:
-  serializedVersion: 26
+  serializedVersion: 22200
   internalIDToNameTable:
   - first:
       1: 100000
@@ -464,7 +464,7 @@ ModelImporter:
     second: //RootNode
   externalObjects: {}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 0
@@ -473,18 +473,20 @@ ModelImporter:
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
     motionNodeName: TSMGWorldJoint/Root
     rigImportErrors: 
     rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: "\nClip 'Take 001' has import animation warnings that
-      might lower retargeting quality:\n\t'leftArm1_HiResUpperArmTwist' is inbetween
-      humanoid transforms and has rotation animation that will be discarded.\n\t'leftArm1_HiResLowerArmTwist'
+      might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'spine1_loResSpine3' is inbetween humanoid
+      transforms and has rotation animation that will be discarded.\n\t'leftArm1_HiResUpperArmTwist'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'leftArm1_HiResLowerArmTwist'
       is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'rightArm1_HiResUpperArmTwist'
       is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'rightArm1_HiResLowerArmTwist'
       is inbetween humanoid transforms and has rotation animation that will be discarded.\n"
-    animationRetargetingWarnings: "\nRetargeting quality report for clip 'Take 001':\n\tRetargeting
-      quality is good. No significant differences with original animation were found.\n"
+    animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
@@ -519,7 +521,32 @@ ModelImporter:
       heightFromFeet: 0
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
+      curves:
+      - name: HeadIKWeight
+        curve:
+          serializedVersion: 2
+          curve:
+          - serializedVersion: 3
+            time: 0
+            value: 0
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 0.99432373
+            value: 1.0037842
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          preInfinity: 3
+          postInfinity: 3
+          rotationOrder: 4
       events: []
       transformMask:
       - path: 
@@ -849,7 +876,7 @@ ModelImporter:
       - path: TSMGWorldJoint
         weight: 1
       - path: TSMGWorldJoint/Root
-        weight: 0
+        weight: 1
       - path: TSMGWorldJoint/spine1_loResSpine1
         weight: 1
       - path: TSMGWorldJoint/spine1_loResSpine1/leftLeg1_LoResUpperLeg
@@ -895,7 +922,7 @@ ModelImporter:
       - path: TSMGWorldJoint/spine1_loResSpine1/spine1_loResSpine2/spine1_loResSpine3/leftArm1_HiResClavical/leftArm1_HiResUpperArm/leftArm1_HiResUpperArmTwist/leftArm1_HiResLowerArm/leftArm1_HiResLowerArmTwist/leftArm1_HiResHand/leftFinger1_MetaCarpel/leftFinger1_Joint1/leftFinger1_Joint2
         weight: 1
       - path: TSMGWorldJoint/spine1_loResSpine1/spine1_loResSpine2/spine1_loResSpine3/leftArm1_HiResClavical/leftArm1_HiResUpperArm/leftArm1_HiResUpperArmTwist/leftArm1_HiResLowerArm/leftArm1_HiResLowerArmTwist/leftArm1_HiResHand/leftFinger1_MetaCarpel/leftFinger1_Joint1/leftFinger1_Joint2/leftFinger1_Joint3
-        weight: 0
+        weight: 1
       - path: TSMGWorldJoint/spine1_loResSpine1/spine1_loResSpine2/spine1_loResSpine3/leftArm1_HiResClavical/leftArm1_HiResUpperArm/leftArm1_HiResUpperArmTwist/leftArm1_HiResLowerArm/leftArm1_HiResLowerArmTwist/leftArm1_HiResHand/leftFinger2_MetaCarpel
         weight: 1
       - path: TSMGWorldJoint/spine1_loResSpine1/spine1_loResSpine2/spine1_loResSpine3/leftArm1_HiResClavical/leftArm1_HiResUpperArm/leftArm1_HiResUpperArmTwist/leftArm1_HiResLowerArm/leftArm1_HiResLowerArmTwist/leftArm1_HiResHand/leftFinger2_MetaCarpel/leftFinger2_Joint1
@@ -903,7 +930,7 @@ ModelImporter:
       - path: TSMGWorldJoint/spine1_loResSpine1/spine1_loResSpine2/spine1_loResSpine3/leftArm1_HiResClavical/leftArm1_HiResUpperArm/leftArm1_HiResUpperArmTwist/leftArm1_HiResLowerArm/leftArm1_HiResLowerArmTwist/leftArm1_HiResHand/leftFinger2_MetaCarpel/leftFinger2_Joint1/leftFinger2_Joint2
         weight: 1
       - path: TSMGWorldJoint/spine1_loResSpine1/spine1_loResSpine2/spine1_loResSpine3/leftArm1_HiResClavical/leftArm1_HiResUpperArm/leftArm1_HiResUpperArmTwist/leftArm1_HiResLowerArm/leftArm1_HiResLowerArmTwist/leftArm1_HiResHand/leftFinger2_MetaCarpel/leftFinger2_Joint1/leftFinger2_Joint2/leftFinger2_Joint3
-        weight: 0
+        weight: 1
       - path: TSMGWorldJoint/spine1_loResSpine1/spine1_loResSpine2/spine1_loResSpine3/leftArm1_HiResClavical/leftArm1_HiResUpperArm/leftArm1_HiResUpperArmTwist/leftArm1_HiResLowerArm/leftArm1_HiResLowerArmTwist/leftArm1_HiResHand/leftFinger3_MetaCarpel
         weight: 1
       - path: TSMGWorldJoint/spine1_loResSpine1/spine1_loResSpine2/spine1_loResSpine3/leftArm1_HiResClavical/leftArm1_HiResUpperArm/leftArm1_HiResUpperArmTwist/leftArm1_HiResLowerArm/leftArm1_HiResLowerArmTwist/leftArm1_HiResHand/leftFinger3_MetaCarpel/leftFinger3_Joint1
@@ -911,7 +938,7 @@ ModelImporter:
       - path: TSMGWorldJoint/spine1_loResSpine1/spine1_loResSpine2/spine1_loResSpine3/leftArm1_HiResClavical/leftArm1_HiResUpperArm/leftArm1_HiResUpperArmTwist/leftArm1_HiResLowerArm/leftArm1_HiResLowerArmTwist/leftArm1_HiResHand/leftFinger3_MetaCarpel/leftFinger3_Joint1/leftFinger3_Joint2
         weight: 1
       - path: TSMGWorldJoint/spine1_loResSpine1/spine1_loResSpine2/spine1_loResSpine3/leftArm1_HiResClavical/leftArm1_HiResUpperArm/leftArm1_HiResUpperArmTwist/leftArm1_HiResLowerArm/leftArm1_HiResLowerArmTwist/leftArm1_HiResHand/leftFinger3_MetaCarpel/leftFinger3_Joint1/leftFinger3_Joint2/leftFinger3_Joint3
-        weight: 0
+        weight: 1
       - path: TSMGWorldJoint/spine1_loResSpine1/spine1_loResSpine2/spine1_loResSpine3/leftArm1_HiResClavical/leftArm1_HiResUpperArm/leftArm1_HiResUpperArmTwist/leftArm1_HiResLowerArm/leftArm1_HiResLowerArmTwist/leftArm1_HiResHand/leftFinger4_MetaCarpel
         weight: 1
       - path: TSMGWorldJoint/spine1_loResSpine1/spine1_loResSpine2/spine1_loResSpine3/leftArm1_HiResClavical/leftArm1_HiResUpperArm/leftArm1_HiResUpperArmTwist/leftArm1_HiResLowerArm/leftArm1_HiResLowerArmTwist/leftArm1_HiResHand/leftFinger4_MetaCarpel/leftFinger4_Joint1
@@ -919,7 +946,7 @@ ModelImporter:
       - path: TSMGWorldJoint/spine1_loResSpine1/spine1_loResSpine2/spine1_loResSpine3/leftArm1_HiResClavical/leftArm1_HiResUpperArm/leftArm1_HiResUpperArmTwist/leftArm1_HiResLowerArm/leftArm1_HiResLowerArmTwist/leftArm1_HiResHand/leftFinger4_MetaCarpel/leftFinger4_Joint1/leftFinger4_Joint2
         weight: 1
       - path: TSMGWorldJoint/spine1_loResSpine1/spine1_loResSpine2/spine1_loResSpine3/leftArm1_HiResClavical/leftArm1_HiResUpperArm/leftArm1_HiResUpperArmTwist/leftArm1_HiResLowerArm/leftArm1_HiResLowerArmTwist/leftArm1_HiResHand/leftFinger4_MetaCarpel/leftFinger4_Joint1/leftFinger4_Joint2/leftFinger4_Joint3
-        weight: 0
+        weight: 1
       - path: TSMGWorldJoint/spine1_loResSpine1/spine1_loResSpine2/spine1_loResSpine3/leftArm1_HiResClavical/leftArm1_HiResUpperArm/leftArm1_HiResUpperArmTwist/leftArm1_HiResLowerArm/leftArm1_HiResLowerArmTwist/leftArm1_HiResHand/leftThumb1_Joint1
         weight: 1
       - path: TSMGWorldJoint/spine1_loResSpine1/spine1_loResSpine2/spine1_loResSpine3/leftArm1_HiResClavical/leftArm1_HiResUpperArm/leftArm1_HiResUpperArmTwist/leftArm1_HiResLowerArm/leftArm1_HiResLowerArmTwist/leftArm1_HiResHand/leftThumb1_Joint1/leftThumb1_Joint2
@@ -945,7 +972,7 @@ ModelImporter:
       - path: TSMGWorldJoint/spine1_loResSpine1/spine1_loResSpine2/spine1_loResSpine3/rightArm1_HiResClavical/rightArm1_HiResUpperArm/rightArm1_HiResUpperArmTwist/rightArm1_HiResLowerArm/rightArm1_HiResLowerArmTwist/rightArm1_HiResHand/rightFinger1_MetaCarpel/rightFinger1_Joint1/rightFinger1_Joint2
         weight: 1
       - path: TSMGWorldJoint/spine1_loResSpine1/spine1_loResSpine2/spine1_loResSpine3/rightArm1_HiResClavical/rightArm1_HiResUpperArm/rightArm1_HiResUpperArmTwist/rightArm1_HiResLowerArm/rightArm1_HiResLowerArmTwist/rightArm1_HiResHand/rightFinger1_MetaCarpel/rightFinger1_Joint1/rightFinger1_Joint2/rightFinger1_Joint3
-        weight: 0
+        weight: 1
       - path: TSMGWorldJoint/spine1_loResSpine1/spine1_loResSpine2/spine1_loResSpine3/rightArm1_HiResClavical/rightArm1_HiResUpperArm/rightArm1_HiResUpperArmTwist/rightArm1_HiResLowerArm/rightArm1_HiResLowerArmTwist/rightArm1_HiResHand/rightFinger2_MetaCarpel
         weight: 1
       - path: TSMGWorldJoint/spine1_loResSpine1/spine1_loResSpine2/spine1_loResSpine3/rightArm1_HiResClavical/rightArm1_HiResUpperArm/rightArm1_HiResUpperArmTwist/rightArm1_HiResLowerArm/rightArm1_HiResLowerArmTwist/rightArm1_HiResHand/rightFinger2_MetaCarpel/rightFinger2_Joint1
@@ -953,7 +980,7 @@ ModelImporter:
       - path: TSMGWorldJoint/spine1_loResSpine1/spine1_loResSpine2/spine1_loResSpine3/rightArm1_HiResClavical/rightArm1_HiResUpperArm/rightArm1_HiResUpperArmTwist/rightArm1_HiResLowerArm/rightArm1_HiResLowerArmTwist/rightArm1_HiResHand/rightFinger2_MetaCarpel/rightFinger2_Joint1/rightFinger2_Joint2
         weight: 1
       - path: TSMGWorldJoint/spine1_loResSpine1/spine1_loResSpine2/spine1_loResSpine3/rightArm1_HiResClavical/rightArm1_HiResUpperArm/rightArm1_HiResUpperArmTwist/rightArm1_HiResLowerArm/rightArm1_HiResLowerArmTwist/rightArm1_HiResHand/rightFinger2_MetaCarpel/rightFinger2_Joint1/rightFinger2_Joint2/rightFinger2_Joint3
-        weight: 0
+        weight: 1
       - path: TSMGWorldJoint/spine1_loResSpine1/spine1_loResSpine2/spine1_loResSpine3/rightArm1_HiResClavical/rightArm1_HiResUpperArm/rightArm1_HiResUpperArmTwist/rightArm1_HiResLowerArm/rightArm1_HiResLowerArmTwist/rightArm1_HiResHand/rightFinger3_MetaCarpel
         weight: 1
       - path: TSMGWorldJoint/spine1_loResSpine1/spine1_loResSpine2/spine1_loResSpine3/rightArm1_HiResClavical/rightArm1_HiResUpperArm/rightArm1_HiResUpperArmTwist/rightArm1_HiResLowerArm/rightArm1_HiResLowerArmTwist/rightArm1_HiResHand/rightFinger3_MetaCarpel/rightFinger3_Joint1
@@ -961,7 +988,7 @@ ModelImporter:
       - path: TSMGWorldJoint/spine1_loResSpine1/spine1_loResSpine2/spine1_loResSpine3/rightArm1_HiResClavical/rightArm1_HiResUpperArm/rightArm1_HiResUpperArmTwist/rightArm1_HiResLowerArm/rightArm1_HiResLowerArmTwist/rightArm1_HiResHand/rightFinger3_MetaCarpel/rightFinger3_Joint1/rightFinger3_Joint2
         weight: 1
       - path: TSMGWorldJoint/spine1_loResSpine1/spine1_loResSpine2/spine1_loResSpine3/rightArm1_HiResClavical/rightArm1_HiResUpperArm/rightArm1_HiResUpperArmTwist/rightArm1_HiResLowerArm/rightArm1_HiResLowerArmTwist/rightArm1_HiResHand/rightFinger3_MetaCarpel/rightFinger3_Joint1/rightFinger3_Joint2/rightFinger3_Joint3
-        weight: 0
+        weight: 1
       - path: TSMGWorldJoint/spine1_loResSpine1/spine1_loResSpine2/spine1_loResSpine3/rightArm1_HiResClavical/rightArm1_HiResUpperArm/rightArm1_HiResUpperArmTwist/rightArm1_HiResLowerArm/rightArm1_HiResLowerArmTwist/rightArm1_HiResHand/rightFinger4_MetaCarpel
         weight: 1
       - path: TSMGWorldJoint/spine1_loResSpine1/spine1_loResSpine2/spine1_loResSpine3/rightArm1_HiResClavical/rightArm1_HiResUpperArm/rightArm1_HiResUpperArmTwist/rightArm1_HiResLowerArm/rightArm1_HiResLowerArmTwist/rightArm1_HiResHand/rightFinger4_MetaCarpel/rightFinger4_Joint1
@@ -969,7 +996,7 @@ ModelImporter:
       - path: TSMGWorldJoint/spine1_loResSpine1/spine1_loResSpine2/spine1_loResSpine3/rightArm1_HiResClavical/rightArm1_HiResUpperArm/rightArm1_HiResUpperArmTwist/rightArm1_HiResLowerArm/rightArm1_HiResLowerArmTwist/rightArm1_HiResHand/rightFinger4_MetaCarpel/rightFinger4_Joint1/rightFinger4_Joint2
         weight: 1
       - path: TSMGWorldJoint/spine1_loResSpine1/spine1_loResSpine2/spine1_loResSpine3/rightArm1_HiResClavical/rightArm1_HiResUpperArm/rightArm1_HiResUpperArmTwist/rightArm1_HiResLowerArm/rightArm1_HiResLowerArmTwist/rightArm1_HiResHand/rightFinger4_MetaCarpel/rightFinger4_Joint1/rightFinger4_Joint2/rightFinger4_Joint3
-        weight: 0
+        weight: 1
       - path: TSMGWorldJoint/spine1_loResSpine1/spine1_loResSpine2/spine1_loResSpine3/rightArm1_HiResClavical/rightArm1_HiResUpperArm/rightArm1_HiResUpperArmTwist/rightArm1_HiResLowerArm/rightArm1_HiResLowerArmTwist/rightArm1_HiResHand/rightThumb1_Joint1
         weight: 1
       - path: TSMGWorldJoint/spine1_loResSpine1/spine1_loResSpine2/spine1_loResSpine3/rightArm1_HiResClavical/rightArm1_HiResUpperArm/rightArm1_HiResUpperArmTwist/rightArm1_HiResLowerArm/rightArm1_HiResLowerArmTwist/rightArm1_HiResHand/rightThumb1_Joint1/rightThumb1_Joint2
@@ -3724,26 +3751,35 @@ ModelImporter:
     addColliders: 0
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
+    importPhysicalCameras: 1
     importVisibility: 0
     importBlendShapes: 1
     importCameras: 0
     importLights: 0
+    nodeNameCollisionStrategy: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
     preserveHierarchy: 0
     skinWeightsMode: 0
     maxBonesPerVertex: 4
     minBoneWeight: 0.001
+    optimizeBones: 1
     meshOptimizationFlags: -1
     indexFormat: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
+    strictVertexDataChecks: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -3754,7 +3790,6 @@ ModelImporter:
     normalSmoothingSource: 0
   referencedClips: []
   importAnimation: 1
-  copyAvatar: 1
   humanDescription:
     serializedVersion: 3
     human:
@@ -3822,22 +3857,14 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: spine1_loResSpine3
-      humanName: Chest
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: head1_head
+    - boneName: head1_neck
       humanName: Head
       limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
+        min: {x: -40, y: -40, z: -24.26735}
+        max: {x: 40, y: 40, z: 15.938301}
         value: {x: 0, y: 0, z: 0}
         length: 0
-        modified: 0
+        modified: 1
     - boneName: leftArm1_HiResClavical
       humanName: LeftShoulder
       limit:
@@ -3918,6 +3945,14 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
+    - boneName: head1_head
+      humanName: RightEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
     - boneName: leftThumb1_Joint1
       humanName: Left Thumb Proximal
       limit:
@@ -3942,7 +3977,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: leftFinger4_Joint1
+    - boneName: leftFinger4_MetaCarpel
       humanName: Left Index Proximal
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -3950,7 +3985,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: leftFinger4_Joint2
+    - boneName: leftFinger4_Joint1
       humanName: Left Index Intermediate
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -3958,7 +3993,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: leftFinger4_Joint3
+    - boneName: leftFinger4_Joint2
       humanName: Left Index Distal
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -3966,7 +4001,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: leftFinger3_Joint1
+    - boneName: leftFinger3_MetaCarpel
       humanName: Left Middle Proximal
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -3974,7 +4009,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: leftFinger3_Joint2
+    - boneName: leftFinger3_Joint1
       humanName: Left Middle Intermediate
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -3982,7 +4017,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: leftFinger3_Joint3
+    - boneName: leftFinger3_Joint2
       humanName: Left Middle Distal
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -3990,7 +4025,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: leftFinger2_Joint1
+    - boneName: leftFinger2_MetaCarpel
       humanName: Left Ring Proximal
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -3998,7 +4033,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: leftFinger2_Joint2
+    - boneName: leftFinger2_Joint1
       humanName: Left Ring Intermediate
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -4006,7 +4041,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: leftFinger2_Joint3
+    - boneName: leftFinger2_Joint2
       humanName: Left Ring Distal
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -4014,7 +4049,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: leftFinger1_Joint1
+    - boneName: leftFinger1_MetaCarpel
       humanName: Left Little Proximal
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -4022,7 +4057,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: leftFinger1_Joint2
+    - boneName: leftFinger1_Joint1
       humanName: Left Little Intermediate
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -4030,7 +4065,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: leftFinger1_Joint3
+    - boneName: leftFinger1_Joint2
       humanName: Left Little Distal
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -4062,7 +4097,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: rightFinger4_Joint1
+    - boneName: rightFinger4_MetaCarpel
       humanName: Right Index Proximal
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -4070,7 +4105,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: rightFinger4_Joint2
+    - boneName: rightFinger4_Joint1
       humanName: Right Index Intermediate
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -4078,7 +4113,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: rightFinger4_Joint3
+    - boneName: rightFinger4_Joint2
       humanName: Right Index Distal
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -4086,7 +4121,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: rightFinger3_Joint1
+    - boneName: rightFinger3_MetaCarpel
       humanName: Right Middle Proximal
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -4094,7 +4129,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: rightFinger3_Joint2
+    - boneName: rightFinger3_Joint1
       humanName: Right Middle Intermediate
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -4102,7 +4137,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: rightFinger3_Joint3
+    - boneName: rightFinger3_Joint2
       humanName: Right Middle Distal
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -4110,7 +4145,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: rightFinger2_Joint1
+    - boneName: rightFinger2_MetaCarpel
       humanName: Right Ring Proximal
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -4118,7 +4153,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: rightFinger2_Joint2
+    - boneName: rightFinger2_Joint1
       humanName: Right Ring Intermediate
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -4126,7 +4161,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: rightFinger2_Joint3
+    - boneName: rightFinger2_Joint2
       humanName: Right Ring Distal
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -4134,7 +4169,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: rightFinger1_Joint1
+    - boneName: rightFinger1_MetaCarpel
       humanName: Right Little Proximal
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -4142,7 +4177,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: rightFinger1_Joint2
+    - boneName: rightFinger1_Joint1
       humanName: Right Little Intermediate
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -4150,16 +4185,8 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: rightFinger1_Joint3
+    - boneName: rightFinger1_Joint2
       humanName: Right Little Distal
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: head1_neck
-      humanName: Neck
       limit:
         min: {x: 0, y: 0, z: 0}
         max: {x: 0, y: 0, z: 0}
@@ -4173,334 +4200,334 @@ ModelImporter:
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: BanditMesh
-      parentName: 
-      position: {x: 0, y: 0, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
+      parentName: Bandit(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: TSMGWorldJoint
-      parentName: 
-      position: {x: 0, y: 0, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
+      parentName: Bandit(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Root
-      parentName: 
-      position: {x: 0, y: 0, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
+      parentName: TSMGWorldJoint
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: spine1_loResSpine1
-      parentName: 
-      position: {x: -0, y: 0.9863825, z: -0.0115024485}
+      parentName: TSMGWorldJoint
+      position: {x: -0, y: 0.98638237, z: -0.011502448}
       rotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
-    - name: leftLeg1_LoResUpperLeg
-      parentName: 
-      position: {x: 0.09621191, y: -0.058728483, z: 0.03193106}
-      rotation: {x: 0.0035296537, y: -0.000000011039426, z: 0.9999938, w: 1.4468512e-10}
-      scale: {x: 1, y: 1, z: 1}
-    - name: leftLeg1_LoResLowerLeg
-      parentName: 
-      position: {x: -0.37800586, y: 0, z: 0}
-      rotation: {x: 0, y: -0.009084568, z: -0, w: 0.99995875}
-      scale: {x: 1, y: 1, z: 1}
-    - name: leftLeg1_LoResFoot
-      parentName: 
-      position: {x: -0.42120647, y: 0, z: 0}
-      rotation: {x: -3.4704724e-16, y: 0.5923259, z: 0.0000000123672335, w: 0.80569845}
-      scale: {x: 1, y: 1, z: 1}
-    - name: leftLeg1_LoResToe
-      parentName: 
-      position: {x: -0.16519853, y: 0, z: 0}
-      rotation: {x: 3.4414374e-16, y: 0.11954485, z: 0.000000031680397, w: 0.9928288}
-      scale: {x: 1, y: 1, z: 1}
-    - name: rightLeg1_LoResUpperLeg
-      parentName: 
-      position: {x: 0.09621191, y: 0.058728483, z: 0.03193106}
-      rotation: {x: 0.0035296537, y: 0.000000007449941, z: 0.9999938, w: -9.763998e-11}
-      scale: {x: 1, y: 1, z: 1}
-    - name: rightLeg1_LoResLowerLeg
-      parentName: 
-      position: {x: -0.37800586, y: 0, z: 0}
-      rotation: {x: 0, y: -0.009084568, z: -0, w: 0.99995875}
-      scale: {x: 1, y: 1, z: 1}
-    - name: rightLeg1_LoResFoot
-      parentName: 
-      position: {x: -0.42120647, y: 0, z: 0}
-      rotation: {x: -2.9939715e-21, y: 0.5923259, z: -2.1687296e-15, w: 0.80569845}
-      scale: {x: 1, y: 1, z: 1}
-    - name: rightLeg1_LoResToe
-      parentName: 
-      position: {x: -0.16519853, y: 0, z: 0}
-      rotation: {x: -2.7290902e-23, y: 0.11954485, z: -3.5564453e-15, w: 0.9928288}
-      scale: {x: 1, y: 1, z: 1}
     - name: spine1_loResSpine2
-      parentName: 
-      position: {x: -0.17197914, y: 3.818704e-17, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
+      parentName: spine1_loResSpine1
+      position: {x: -0.17197911, y: 3.8187035e-17, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: spine1_loResSpine3
-      parentName: 
-      position: {x: -0.17846322, y: 3.9626795e-17, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
+      parentName: spine1_loResSpine2
+      position: {x: -0.1784632, y: 3.9626792e-17, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: head1_neck
-      parentName: 
-      position: {x: -0.15838125, y: 3.5167703e-17, z: -0.010586548}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
+      parentName: spine1_loResSpine3
+      position: {x: -0.15838125, y: 3.5167703e-17, z: -0.010586547}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: head1_head
-      parentName: 
-      position: {x: -0.07306282, y: -2.2712292e-17, z: -4.440892e-18}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
+      parentName: head1_neck
+      position: {x: -0.073062815, y: -2.2712292e-17, z: -4.4408916e-18}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: leftArm1_HiResClavical
-      parentName: 
-      position: {x: -0.027871033, y: -0.08453054, z: -0.008370965}
+      parentName: spine1_loResSpine3
+      position: {x: -0.02787103, y: -0.08453053, z: -0.008370963}
       rotation: {x: 0, y: 0, z: 0.59415966, w: 0.8043471}
       scale: {x: 1, y: 1, z: 1}
     - name: leftArm1_HiResUpperArm
-      parentName: 
-      position: {x: -0.09584159, y: 0, z: 0}
-      rotation: {x: 0.022704227, y: -0.021625767, z: 0.15870455, w: 0.9868281}
+      parentName: leftArm1_HiResClavical
+      position: {x: -0.09584157, y: 0, z: 0}
+      rotation: {x: 0.022704227, y: -0.021625768, z: 0.15870455, w: 0.98682815}
       scale: {x: 1, y: 1, z: 1}
     - name: leftArm1_HiResUpperArmTwist
-      parentName: 
-      position: {x: -0.1266042, y: 0, z: 0}
+      parentName: leftArm1_HiResUpperArm
+      position: {x: -0.12660418, y: 0, z: 0}
       rotation: {x: -1.01915004e-17, y: 4.1199683e-18, z: -4.1524943e-17, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: leftArm1_HiResLowerArm
-      parentName: 
-      position: {x: -0.1266042, y: 0, z: 0}
+      parentName: leftArm1_HiResUpperArmTwist
+      position: {x: -0.12660418, y: 0, z: 0}
       rotation: {x: 0, y: 0.04034305, z: -0, w: 0.9991859}
       scale: {x: 1, y: 1, z: 1}
     - name: leftArm1_HiResLowerArmTwist
-      parentName: 
-      position: {x: -0.12365461, y: 0, z: -4.440892e-18}
+      parentName: leftArm1_HiResLowerArm
+      position: {x: -0.1236546, y: 0, z: -4.4408916e-18}
       rotation: {x: 0, y: -1.0408341e-17, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: leftArm1_HiResHand
-      parentName: 
-      position: {x: -0.12365461, y: 0, z: -4.440892e-18}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
+      parentName: leftArm1_HiResLowerArmTwist
+      position: {x: -0.1236546, y: 0, z: -4.4408916e-18}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: leftFinger1_MetaCarpel
-      parentName: 
-      position: {x: -0.05143324, y: -0.0075504594, z: -0.027704999}
-      rotation: {x: -0.019256951, y: -0.057747617, z: -0.010238932, w: 0.99809295}
+      parentName: leftArm1_HiResHand
+      position: {x: -0.05143323, y: -0.0075504584, z: -0.027704995}
+      rotation: {x: -0.020638362, y: 0.027544905, z: 0.028456442, w: 0.99900234}
       scale: {x: 1, y: 1, z: 1}
     - name: leftFinger1_Joint1
-      parentName: 
-      position: {x: -0.047462787, y: 0, z: -3.330669e-17}
-      rotation: {x: 0.0000000045305404, y: 0.043980636, z: 0.014154694, w: 0.9989321}
+      parentName: leftFinger1_MetaCarpel
+      position: {x: -0.04746278, y: 0, z: -3.3306685e-17}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: leftFinger1_Joint2
-      parentName: 
-      position: {x: -0.031641856, y: 0, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
+      parentName: leftFinger1_Joint1
+      position: {x: -0.031641852, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: leftFinger1_Joint3
-      parentName: 
-      position: {x: -0.027692804, y: 2.842171e-16, z: 8.881784e-18}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
+      parentName: leftFinger1_Joint2
+      position: {x: -0.027692799, y: 2.8421706e-16, z: 8.881783e-18}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: leftFinger2_MetaCarpel
-      parentName: 
-      position: {x: -0.05321074, y: -0.0068346146, z: -0.009591245}
-      rotation: {x: -0.018807767, y: -0.01558124, z: -0.0110423695, w: 0.99964076}
+      parentName: leftArm1_HiResHand
+      position: {x: -0.05321073, y: -0.006834614, z: -0.009591244}
+      rotation: {x: -0.018736716, y: 0.031030625, z: 0.017994462, w: 0.99918085}
       scale: {x: 1, y: 1, z: 1}
     - name: leftFinger2_Joint1
-      parentName: 
-      position: {x: -0.047462787, y: 2.842171e-16, z: 0}
-      rotation: {x: -1.8769241e-11, y: 0.0045153936, z: 0.0022164069, w: 0.99998736}
+      parentName: leftFinger2_MetaCarpel
+      position: {x: -0.04746278, y: 2.8421706e-16, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: leftFinger2_Joint2
-      parentName: 
-      position: {x: -0.031641856, y: 0, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
+      parentName: leftFinger2_Joint1
+      position: {x: -0.031641852, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: leftFinger2_Joint3
-      parentName: 
-      position: {x: -0.031641856, y: 0, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
+      parentName: leftFinger2_Joint2
+      position: {x: -0.031641852, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: leftFinger3_MetaCarpel
-      parentName: 
-      position: {x: -0.051261615, y: -0.006129846, z: 0.010492307}
-      rotation: {x: -0.01834819, y: 0.024656933, z: -0.01179025, w: 0.9994581}
+      parentName: leftArm1_HiResHand
+      position: {x: -0.051261608, y: -0.006129845, z: 0.010492305}
+      rotation: {x: -0.017780486, y: 0.040416602, z: 0.0033588782, w: 0.99901915}
       scale: {x: 1, y: 1, z: 1}
     - name: leftFinger3_Joint1
-      parentName: 
-      position: {x: -0.047462787, y: 5.684342e-16, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
+      parentName: leftFinger3_MetaCarpel
+      position: {x: -0.04746278, y: 5.684341e-16, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: leftFinger3_Joint2
-      parentName: 
-      position: {x: -0.031641856, y: 0, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
+      parentName: leftFinger3_Joint1
+      position: {x: -0.031641852, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: leftFinger3_Joint3
-      parentName: 
-      position: {x: -0.032727398, y: -2.842171e-16, z: -1.7763568e-17}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
+      parentName: leftFinger3_Joint2
+      position: {x: -0.032727398, y: -2.8421706e-16, z: -1.7763566e-17}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: leftFinger4_MetaCarpel
-      parentName: 
-      position: {x: -0.0487409, y: -0.005557187, z: 0.027381076}
+      parentName: leftArm1_HiResHand
+      position: {x: -0.048740894, y: -0.0055571864, z: 0.027381074}
       rotation: {x: -0.017703732, y: 0.077107266, z: -0.012737498, w: 0.99678427}
       scale: {x: 1, y: 1, z: 1}
     - name: leftFinger4_Joint1
-      parentName: 
-      position: {x: -0.047462787, y: 8.5265126e-16, z: 8.8817837e-17}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
+      parentName: leftFinger4_MetaCarpel
+      position: {x: -0.04746278, y: 8.5265116e-16, z: 8.8817837e-17}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: leftFinger4_Joint2
-      parentName: 
-      position: {x: -0.031641856, y: 0, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
+      parentName: leftFinger4_Joint1
+      position: {x: -0.031641852, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: leftFinger4_Joint3
-      parentName: 
-      position: {x: -0.031641856, y: 0, z: 3.5527136e-17}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
+      parentName: leftFinger4_Joint2
+      position: {x: -0.031641852, y: 0, z: 3.5527133e-17}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: leftThumb1_Joint1
-      parentName: 
-      position: {x: -0.036817774, y: -0.014463796, z: 0.03947111}
-      rotation: {x: 0.6450055, y: 0.25843546, z: -0.27548298, w: 0.6642952}
+      parentName: leftArm1_HiResHand
+      position: {x: -0.03681777, y: -0.014463794, z: 0.039471105}
+      rotation: {x: 0.6401869, y: 0.28551903, z: -0.28761208, w: 0.6526246}
       scale: {x: 1, y: 1, z: 1}
     - name: leftThumb1_Joint2
-      parentName: 
-      position: {x: -0.043170284, y: 0, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
+      parentName: leftThumb1_Joint1
+      position: {x: -0.04317028, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: leftThumb1_Joint3
-      parentName: 
-      position: {x: -0.02610453, y: 0, z: 2.842171e-16}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
+      parentName: leftThumb1_Joint2
+      position: {x: -0.026104528, y: 0, z: 2.8421706e-16}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: rightArm1_HiResClavical
-      parentName: 
-      position: {x: -0.027871033, y: 0.08453054, z: -0.008370965}
+      parentName: spine1_loResSpine3
+      position: {x: -0.02787103, y: 0.08453053, z: -0.008370963}
       rotation: {x: 0.59415966, y: 0.8043471, z: 4.9252058e-17, w: 3.6381786e-17}
       scale: {x: 1, y: 1, z: 1}
     - name: rightArm1_HiResUpperArm
-      parentName: 
-      position: {x: 0.09584159, y: 0, z: 0}
-      rotation: {x: 0.02270423, y: -0.021625765, z: 0.15870455, w: 0.9868281}
+      parentName: rightArm1_HiResClavical
+      position: {x: 0.09584157, y: 0, z: 0}
+      rotation: {x: 0.02270423, y: -0.021625767, z: 0.15870455, w: 0.98682815}
       scale: {x: 1, y: 1, z: 1}
     - name: rightArm1_HiResUpperArmTwist
-      parentName: 
-      position: {x: 0.1266042, y: 0, z: 0}
+      parentName: rightArm1_HiResUpperArm
+      position: {x: 0.12660418, y: 0, z: 0}
       rotation: {x: -4.1850204e-17, y: -1.9298799e-17, z: 2.916504e-17, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: rightArm1_HiResLowerArm
-      parentName: 
-      position: {x: 0.1266042, y: 0, z: 0}
+      parentName: rightArm1_HiResUpperArmTwist
+      position: {x: 0.12660418, y: 0, z: 0}
       rotation: {x: 0, y: 0.040343095, z: -0, w: 0.9991859}
       scale: {x: 1, y: 1, z: 1}
     - name: rightArm1_HiResLowerArmTwist
-      parentName: 
-      position: {x: 0.12365461, y: 0, z: -4.440892e-18}
+      parentName: rightArm1_HiResLowerArm
+      position: {x: 0.1236546, y: 0, z: -4.4408916e-18}
       rotation: {x: 0, y: -1.7347235e-17, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: rightArm1_HiResHand
-      parentName: 
-      position: {x: 0.12365461, y: 0, z: -4.440892e-18}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
+      parentName: rightArm1_HiResLowerArmTwist
+      position: {x: 0.1236546, y: 0, z: -4.4408916e-18}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: rightFinger1_MetaCarpel
-      parentName: 
-      position: {x: 0.05143324, y: 0.0075504594, z: 0.027705025}
-      rotation: {x: -0.05774766, y: 0.019256955, z: 0.99809295, w: 0.010238933}
+      parentName: rightArm1_HiResHand
+      position: {x: 0.05143323, y: 0.0075504584, z: 0.027705021}
+      rotation: {x: 0.027544223, y: 0.020638293, z: 0.9990024, w: -0.028455094}
       scale: {x: 1, y: 1, z: 1}
     - name: rightFinger1_Joint1
-      parentName: 
-      position: {x: -0.047462787, y: -1.1368684e-15, z: 2.5313085e-16}
-      rotation: {x: -0.0000000011059454, y: -0.043980658, z: 0.014154696, w: 0.9989321}
+      parentName: rightFinger1_MetaCarpel
+      position: {x: -0.04746278, y: -1.1368682e-15, z: 2.5313082e-16}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: rightFinger1_Joint2
-      parentName: 
-      position: {x: -0.031641856, y: 0, z: 4.440892e-18}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
+      parentName: rightFinger1_Joint1
+      position: {x: -0.031641852, y: 0, z: 4.4408916e-18}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: rightFinger1_Joint3
-      parentName: 
-      position: {x: -0.027692804, y: 2.842171e-16, z: -1.3322676e-17}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
+      parentName: rightFinger1_Joint2
+      position: {x: -0.027692799, y: 2.8421706e-16, z: -1.3322674e-17}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: rightFinger2_MetaCarpel
-      parentName: 
-      position: {x: 0.05321074, y: 0.0068346146, z: 0.009591271}
-      rotation: {x: -0.015581283, y: 0.018807769, z: 0.9996407, w: 0.0110423695}
+      parentName: rightArm1_HiResHand
+      position: {x: 0.05321073, y: 0.006834614, z: 0.00959127}
+      rotation: {x: 0.031029575, y: 0.018736804, z: 0.99918085, w: -0.01799259}
       scale: {x: 1, y: 1, z: 1}
     - name: rightFinger2_Joint1
-      parentName: 
-      position: {x: -0.047462787, y: -8.5265126e-16, z: 2.6201262e-16}
-      rotation: {x: 2.7280048e-10, y: -0.004515237, z: 0.0022163307, w: 0.99998736}
+      parentName: rightFinger2_MetaCarpel
+      position: {x: -0.04746278, y: -8.5265116e-16, z: 2.620126e-16}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: rightFinger2_Joint2
-      parentName: 
-      position: {x: -0.031641856, y: 0, z: -4.440892e-18}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
+      parentName: rightFinger2_Joint1
+      position: {x: -0.031641852, y: 0, z: -4.4408916e-18}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: rightFinger2_Joint3
-      parentName: 
-      position: {x: -0.031641856, y: 0, z: -4.440892e-18}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
+      parentName: rightFinger2_Joint2
+      position: {x: -0.031641852, y: 0, z: -4.4408916e-18}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: rightFinger3_MetaCarpel
-      parentName: 
-      position: {x: 0.051261615, y: 0.006129846, z: -0.01049228}
-      rotation: {x: 0.02465689, y: 0.018348191, z: 0.9994581, w: 0.011790251}
+      parentName: rightArm1_HiResHand
+      position: {x: 0.051261608, y: 0.006129845, z: -0.010492279}
+      rotation: {x: 0.040415015, y: 0.017780587, z: 0.99901915, w: -0.0033567986}
       scale: {x: 1, y: 1, z: 1}
     - name: rightFinger3_Joint1
-      parentName: 
-      position: {x: -0.047462787, y: -5.684342e-16, z: 3.0198067e-16}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
+      parentName: rightFinger3_MetaCarpel
+      position: {x: -0.04746278, y: -5.684341e-16, z: 3.019806e-16}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: rightFinger3_Joint2
-      parentName: 
-      position: {x: -0.031641856, y: 0, z: 8.881784e-18}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
+      parentName: rightFinger3_Joint1
+      position: {x: -0.031641852, y: 0, z: 8.881783e-18}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: rightFinger3_Joint3
-      parentName: 
-      position: {x: -0.032727398, y: -2.842171e-16, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
+      parentName: rightFinger3_Joint2
+      position: {x: -0.032727398, y: -2.8421706e-16, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: rightFinger4_MetaCarpel
-      parentName: 
-      position: {x: 0.048740905, y: 0.005557187, z: -0.02738105}
+      parentName: rightArm1_HiResHand
+      position: {x: 0.048740897, y: 0.0055571864, z: -0.027381048}
       rotation: {x: 0.07710723, y: 0.017703736, z: 0.99678427, w: 0.012737499}
       scale: {x: 1, y: 1, z: 1}
     - name: rightFinger4_Joint1
-      parentName: 
-      position: {x: -0.047462787, y: -8.5265126e-16, z: 2.4868996e-16}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
+      parentName: rightFinger4_MetaCarpel
+      position: {x: -0.04746278, y: -8.5265116e-16, z: 2.4868993e-16}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: rightFinger4_Joint2
-      parentName: 
-      position: {x: -0.031641856, y: 0, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
+      parentName: rightFinger4_Joint1
+      position: {x: -0.031641852, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: rightFinger4_Joint3
-      parentName: 
-      position: {x: -0.031641856, y: 0, z: -3.5527136e-17}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
+      parentName: rightFinger4_Joint2
+      position: {x: -0.031641852, y: 0, z: -3.5527133e-17}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: rightThumb1_Joint1
-      parentName: 
-      position: {x: 0.036817778, y: 0.014463796, z: -0.039471082}
-      rotation: {x: 0.25843546, y: -0.6450056, z: 0.66429526, w: 0.27548298}
+      parentName: rightArm1_HiResHand
+      position: {x: 0.03681777, y: 0.014463794, z: -0.039471082}
+      rotation: {x: 0.2855178, y: -0.64018697, z: 0.65262526, w: 0.28761178}
       scale: {x: 1, y: 1, z: 1}
     - name: rightThumb1_Joint2
-      parentName: 
-      position: {x: -0.043170284, y: 0, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
+      parentName: rightThumb1_Joint1
+      position: {x: -0.04317028, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: rightThumb1_Joint3
-      parentName: 
-      position: {x: -0.02610453, y: 0, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
+      parentName: rightThumb1_Joint2
+      position: {x: -0.026104528, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: leftLeg1_LoResUpperLeg
+      parentName: spine1_loResSpine1
+      position: {x: 0.096211895, y: -0.05872848, z: 0.031931058}
+      rotation: {x: 0.0035296537, y: -0.000000011039426, z: 0.9999938, w: 1.4468512e-10}
+      scale: {x: 1, y: 1, z: 1}
+    - name: leftLeg1_LoResLowerLeg
+      parentName: leftLeg1_LoResUpperLeg
+      position: {x: -0.37800583, y: 0, z: 0}
+      rotation: {x: 0, y: -0.009084568, z: -0, w: 0.99995875}
+      scale: {x: 1, y: 1, z: 1}
+    - name: leftLeg1_LoResFoot
+      parentName: leftLeg1_LoResLowerLeg
+      position: {x: -0.4212064, y: 0, z: 0}
+      rotation: {x: -3.4704724e-16, y: 0.5923259, z: 0.0000000123672335, w: 0.80569845}
+      scale: {x: 1, y: 1, z: 1}
+    - name: leftLeg1_LoResToe
+      parentName: leftLeg1_LoResFoot
+      position: {x: -0.1651985, y: 0, z: 0}
+      rotation: {x: 3.4414374e-16, y: 0.11954485, z: 0.000000031680397, w: 0.9928288}
+      scale: {x: 1, y: 1, z: 1}
+    - name: rightLeg1_LoResUpperLeg
+      parentName: spine1_loResSpine1
+      position: {x: 0.096211895, y: 0.05872848, z: 0.031931058}
+      rotation: {x: 0.0035296537, y: 0.000000007449941, z: 0.9999938, w: -9.763998e-11}
+      scale: {x: 1, y: 1, z: 1}
+    - name: rightLeg1_LoResLowerLeg
+      parentName: rightLeg1_LoResUpperLeg
+      position: {x: -0.37800583, y: 0, z: 0}
+      rotation: {x: 0, y: -0.009084568, z: -0, w: 0.99995875}
+      scale: {x: 1, y: 1, z: 1}
+    - name: rightLeg1_LoResFoot
+      parentName: rightLeg1_LoResLowerLeg
+      position: {x: -0.4212064, y: 0, z: 0}
+      rotation: {x: -2.9939715e-21, y: 0.5923259, z: -2.1687296e-15, w: 0.80569845}
+      scale: {x: 1, y: 1, z: 1}
+    - name: rightLeg1_LoResToe
+      parentName: rightLeg1_LoResFoot
+      position: {x: -0.1651985, y: 0, z: 0}
+      rotation: {x: -2.7290902e-23, y: 0.11954485, z: -3.5564453e-15, w: 0.9928288}
       scale: {x: 1, y: 1, z: 1}
     armTwist: 0.5
     foreArmTwist: 0.5
@@ -4511,13 +4538,17 @@ ModelImporter:
     feetSpacing: 0
     globalScale: 1
     rootMotionBoneName: Root
-    hasTranslationDoF: 1
-    hasExtraRoot: 0
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
     skeletonHasParents: 0
-  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 31bc5299503c0fe4db0163e0888f5bc8,
-    type: 3}
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 31bc5299503c0fe4db0163e0888f5bc8, type: 3}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 3
   humanoidOversampling: 1
+  avatarSetup: 2
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  importBlendShapeDeformPercent: 0
+  remapMaterialsIfMaterialImportModeIsNone: 1
   additionalBone: 0
   userData: 
   assetBundleName: 
