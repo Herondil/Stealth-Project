@@ -36,7 +36,7 @@ public class AnimatorParameterManager : MonoBehaviour
     {
         Vector2 inputs = c.ReadValue<Vector2>();
         mAnimator.SetFloat("Z direction", inputs.y);
-        mAnimator.SetFloat("X direction", inputs.x);
+        mAnimator.SetFloat("X direction", inputs.x); 
 
         mAnimator.SetFloat("DirectionMagnitude", inputs.sqrMagnitude);
 

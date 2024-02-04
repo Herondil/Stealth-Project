@@ -60,9 +60,10 @@ public class MoveFinal : MonoBehaviour
         cameraRight.y = 0;
 
         //on fait une rotation à chaque fixedUpdate pour vérifier qu'on a bien la bonne direction
+        /*
         rot = Quaternion.LookRotation(cameraForward);
         rb.MoveRotation(rot);
-        
+        */
         //moveDir sera la direction finale du déplacement
         moveDir = Vector3.zero;
 
